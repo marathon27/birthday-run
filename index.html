@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>27km Birthday Adventure</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #f8f9f5; color: #1a2d23; }
+        .bento-card { background: white; border-radius: 32px; padding: 2rem; border: 1px solid rgba(0,0,0,0.05); transition: transform 0.3s ease; overflow: hidden; }
+        .bento-card:hover { transform: translateY(-5px); }
+        .bg-sage { background-color: #e3e9e1; }
+        .bg-terracotta { background-color: #e89d81; }
+        #success-message { display: none; }
+        .fade-in { animation: fadeIn 0.6s ease forwards; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <main class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-4">
+        
+        <div class="md:col-span-2 bento-card bg-sage flex flex-col justify-center min-h-[300px] relative">
+            <div class="relative z-10">
+                <span class="bg-white/50 px-4 py-1 rounded-full text-sm font-bold uppercase tracking-widest text-green-900">March 28, 2026</span>
+                <h1 class="text-4xl md:text-6xl font-800 mt-4 mb-2 tracking-tight leading-none">27KM <span class="text-green-800">RUN.</span></h1>
+                <p class="text-lg opacity-80 font-medium italic text-green-900">Birthday, Friends & Solidarity.</p>
+            </div>
+            <div class="absolute right-[-10px] bottom-[-20px] opacity-10 text-[140px] font-black italic">27</div>
+        </div>
+
+        <div class="md:col-span-2 bento-card p-0 relative group min-h-[300px] bg-gray-100">
+            <img src="https://i.postimg.cc/hv1p3pVM/1000035374.jpg" alt="Race Map" class="absolute inset-0 w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-8 flex flex-col justify-end">
+                <div class="text-3xl mb-2">📍</div>
+                <h3 class="font-bold text-xl uppercase italic text-white">Brussels</h3>
+                <p class="text-sm text-white opacity-90 leading-tight">Exploring Woluwe-Saint-Pierre, the Sonian Forest & Tervuren Park.</p>
+            </div>
+        </div>
+
+        <div class="md:col-span-4 bento-card bg-white border-2 border-orange-100 flex flex-col md:flex-row items-center justify-between gap-6 overflow-hidden">
+            <div class="flex items-center gap-6">
+                <div class="bg-orange-50 w-20 h-20 rounded-full flex items-center justify-center text-4xl shadow-inner">🍯</div>
+                <div>
+                    <h3 class="font-800 text-2xl text-orange-600 uppercase tracking-tighter italic leading-none">Solidarity Pot</h3>
+                    <p class="text-gray-500 font-medium mt-1 text-sm md:text-base">Every euro counts for <strong class="text-orange-900">SAMU Social</strong>.</p>
+                </div>
+            </div>
+            
+            <div class="bg-orange-600 px-10 py-6 rounded-[2.5rem] text-white text-center min-w-[200px] shadow-xl shadow-orange-200">
+                <p class="text-[10px] font-black uppercase tracking-[0.2em] opacity-70 mb-1">Total Raised</p>
+                <p class="text-5xl font-black italic">80 €</p>
+            </div>
+        </div>
+
+        <div class="md:col-span-2 bento-card">
+            <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">
+                <span class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center text-sm font-bold text-green-800">01</span>
+                The Concept
+            </h2>
+            <div class="space-y-4 text-gray-600 leading-relaxed">
+                <p>To celebrate my <strong>27th birthday</strong>, I'm proposing a collective and friendly run around a 27km loop.</p>
+                <p>Each at our own pace, putting sport and health at the heart of the project. <span class="text-green-700 font-semibold italic">The objective is not performance</span>, but sharing and pleasure.</p>
+            </div>
+        </div>
+
+        <div class="md:col-span-2 bento-card border-2 border-dashed border-green-200">
+            <h2 class="text-2xl font-bold mb-4 text-green-900">Schedule</h2>
+            <p class="text-sm text-gray-600 mb-6 font-medium italic">Here are the draft start times for race day:</p>
+            
+            <div class="grid grid-cols-2 gap-4 mb-6">
+                <div class="bg-gray-50 p-4 rounded-2xl border border-gray-100">
+                    <p class="text-xs uppercase text-gray-400 font-bold">27 km</p>
+                    <p class="text-2xl font-black text-green-800">11:00</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-2xl border border-gray-100">
+                    <p class="text-xs uppercase text-gray-400 font-bold">15 km</p>
+                    <p class="text-2xl font-black text-green-800">12:40</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-2xl border border-gray-100">
+                    <p class="text-xs uppercase text-gray-400 font-bold">10 km</p>
+                    <p class="text-2xl font-black text-green-800">13:30</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-2xl border border-gray-100">
+                    <p class="text-xs uppercase text-gray-400 font-bold">5 km</p>
+                    <p class="text-2xl font-black text-green-800">14:20</p>
+                </div>
+            </div>
+
+            <div class="text-xs text-gray-500 space-y-2 leading-relaxed italic">
+                <p>These times are not set in stone just yet—small adjustments may still happen, but they’ll stay very close to these slots.</p>
+                <p>So lace up those shoes, stretch those legs, and keep an eye out for the final update. Race day is getting closer! 🏃‍♀️💨</p>
+            </div>
+        </div>
+
+        <div class="md:col-span-2 bento-card bg-green-900 text-white flex flex-col justify-center">
+            <h2 class="text-2xl font-bold mb-2">Run with Heart. ❤️</h2>
+            <p class="opacity-80 text-sm leading-relaxed mb-4">A contribution is requested to support <strong>SAMU Social</strong> and their actions in Brussels.</p>
+            
+            <a href="https://samusocial.be/support-us/" target="_blank" class="block w-full bg-terracotta text-white text-center py-3 rounded-2xl font-bold hover:opacity-90 transition mb-4 shadow-sm">
+                Support SAMU Social ↗
+            </a>
+
+            <div class="bg-white/10 p-4 rounded-2xl border border-white/20">
+                <p class="text-xs font-semibold text-terracotta italic leading-snug">
+                    💡 For donations starting at €40 per year, you get a 30% tax reduction.
+                </p>
+            </div>
+        </div>
+
+        <div class="md:col-span-2 bento-card border-2 border-blue-50">
+            <h2 class="text-xl font-bold text-blue-600 mb-3 uppercase tracking-tight">Tracking & Community 📱</h2>
+            <div class="space-y-4">
+                <a href="https://www.komoot.com/invite-tour/2779768970?code=9c2xzg-vDxUgJFs9Sw2FPZQSuqzoM_5w9gCq-Cew8K1I0RcR1g&ref=wtd&share_token=arUAySl5tBmKFHcTN7GxU6G2kq2gRrDTtpIa2GWePzRCTL2UGM" 
+                   target="_blank" 
+                   class="inline-block bg-blue-600 text-white px-6 py-3 rounded-2xl font-bold text-sm hover:bg-blue-700 transition shadow-sm">
+                    View Komoot Route
+                </a>
+                
+                <p class="text-sm text-gray-600 leading-relaxed">
+                    📍 Alongside the race route link, we’ll also set up a <strong>WhatsApp group</strong> for all participants.
+                </p>
+                <p class="text-xs text-gray-500 italic leading-relaxed">
+                    This way, everyone who wants, can share their live location, keep track of each other, and easily see where the group is before, during, and after the race. No one gets lost, and it’s much easier to meet up, cheer each other on, or find that well-deserved ravito/snacks together!
+                </p>
+            </div>
+        </div>
+
+        <div class="md:col-span-4 bento-card bg-white flex items-center gap-4">
+            <div class="text-3xl">🍎</div>
+            <div>
+                <h3 class="font-bold text-orange-600 uppercase text-xs tracking-widest">Refreshments</h3>
+                <p class="text-sm text-gray-500 font-medium leading-tight mt-1">Healthy stations/ravito's provided. We'll find that snack together!</p>
+            </div>
+        </div>
+
+        <div id="register" class="md:col-span-4 bento-card shadow-2xl border-t-4 border-terracotta mt-4">
+            <div id="form-wrapper" class="max-w-3xl mx-auto">
+                <div class="text-center mb-8">
+                    <h2 class="text-4xl font-bold italic uppercase tracking-tighter text-green-900">Registration</h2>
+                    <p class="text-gray-400">Join the movement. Every kilometer counts.</p>
+                </div>
+                <form id="reg-form" action="https://formspree.io/f/xaqeljeo" method="POST" class="grid md:grid-cols-2 gap-4">
+                    <input type="text" name="name" placeholder="Full Name" required class="bg-gray-50 p-4 rounded-2xl outline-none border border-gray-100 text-sm">
+                    <input type="email" name="email" placeholder="Email Address" required class="bg-gray-50 p-4 rounded-2xl outline-none border border-gray-100 text-sm">
+                    <input type="tel" name="phone" placeholder="Phone Number" required class="bg-gray-50 p-4 rounded-2xl outline-none border border-gray-100 text-sm">
+                    <select name="distance" required class="bg-gray-50 p-4 rounded-2xl outline-none border border-gray-100 text-gray-400 text-sm">
+                        <option value="" disabled selected>Select distance</option>
+                        <option>27 km</option><option>15 km</option><option>10 km</option><option>5 km</option><option>Support/Other</option>
+                    </select>
+                    <div class="relative md:col-span-2">
+                        <span class="absolute left-4 top-4 text-gray-400 font-bold text-sm">€</span>
+                        <input type="number" id="pledge-amount" name="amount" placeholder="Amount that you want to donate" min="1" class="w-full bg-gray-50 p-4 pl-10 rounded-2xl outline-none border border-gray-100 text-sm font-medium">
+                    </div>
+                    <button type="submit" class="md:col-span-2 bg-terracotta text-white py-5 rounded-2xl font-bold text-xl hover:opacity-90 transition shadow-lg uppercase tracking-widest mt-2">Confirm Registration</button>
+                </form>
+            </div>
+
+            <div id="success-message" class="max-w-3xl mx-auto text-center py-6 fade-in">
+                <div class="mb-8">
+                    <div class="text-5xl mb-4">🚀</div>
+                    <h2 class="text-3xl font-bold uppercase tracking-tighter text-green-900">Success!</h2>
+                    <p class="text-gray-500 mt-2 px-4 italic">Thank you for joining! To complete your registration, please make a contribution to support <strong>SAMU Social</strong>.</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-3xl border-2 border-dashed border-terracotta inline-block w-full max-w-md">
+                    <div id="tax-info" class="mb-6 hidden">
+                        <p class="text-sm font-bold text-green-900 bg-green-50 p-4 rounded-xl border border-green-200 mb-4 text-left italic">💡 For donations over 40€, please use the official link for your tax certificate.</p>
+                        <a href="https://samusocialbrussels.don-en-ligne.be/hiver2022/~my-donation#once" target="_blank" class="block w-full bg-green-900 text-white py-4 rounded-xl font-bold text-sm hover:scale-[1.02] transition-transform">Official Donation Link</a>
+                        <div class="relative flex items-center py-6"><div class="flex-grow border-t border-gray-200"></div><span class="flex-shrink mx-4 text-[10px] font-bold uppercase text-gray-400">or bank transfer</span><div class="flex-grow border-t border-gray-200"></div></div>
+                    </div>
+                    <p class="text-xs uppercase tracking-widest text-gray-400 mb-3 font-bold">Transfer to Kenza Jafoufi</p>
+                    <div class="flex flex-col gap-2">
+                        <span id="iban" class="text-lg md:text-xl font-mono font-bold text-terracotta tracking-tight">BE08 0019 9953 9913</span>
+                        <button onclick="copyIban()" id="copy-btn" class="bg-white border border-gray-200 text-gray-600 px-6 py-2 rounded-xl text-sm font-bold shadow-sm hover:bg-gray-100 transition-all mx-auto mt-2">Copy IBAN</button>
+                    </div>
+                    <p class="mt-6 text-sm font-bold text-gray-700 uppercase italic">Communication: RUN 27 - [YOUR NAME]</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="md:col-span-4 p-8 text-center text-gray-400 text-xs font-bold uppercase tracking-widest text-terracotta italic">2026 // 27th Birthday Run // Brussels</div>
+    </main>
+
+    <script>
+        const form = document.getElementById('reg-form');
+        const wrapper = document.getElementById('form-wrapper');
+        const success = document.getElementById('success-message');
+        const pledgeInput = document.getElementById('pledge-amount');
+        const taxInfo = document.getElementById('tax-info');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            if (pledgeInput.value && parseInt(pledgeInput.value) >= 40) taxInfo.classList.remove('hidden');
+            const response = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } });
+            if (response.ok) { wrapper.style.display = 'none'; success.style.display = 'block'; success.scrollIntoView({ behavior: 'smooth' }); }
+            else { alert("Error. Please try again."); }
+        });
+
+        function copyIban() {
+            const ibanText = document.getElementById('iban').innerText;
+            const btn = document.getElementById('copy-btn');
+            navigator.clipboard.writeText(ibanText).then(() => {
+                const originalContent = btn.innerHTML;
+                btn.innerHTML = 'Copied! ✅';
+                setTimeout(() => { btn.innerHTML = originalContent; }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
